@@ -1,0 +1,9 @@
+<ng-container>
+  <div class="content">
+    <ng-content select="[content]"></ng-content>
+  </div>
+  <div class="submit-form">
+    <button (click)="enteredAddNew()" class="add-new" *ngIf="isAddNew">Add</button>
+    <button (click)="enteredUpdate()" class="update" *ngIf="isUpdate">Update</button>
+  </div>
+</ng-container>

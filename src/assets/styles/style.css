@@ -1,0 +1,32 @@
+.label-common {
+  color: #616163;
+  font-size: 12px;
+  line-height: 24px;
+  font-family: Arial;
+  font-weight: bold;
+}
+.label-block {
+  display: block;
+}
+.title-common {
+  font-weight: bold;
+  font-size: 18px;
+  font-family: Arial;
+}
+.label-center {
+  display: block;
+  text-align: center;
+}
+.text-danger {
+  color: #f86c6b;
+}
+.invalid-feeback {
+  display: block;
+  width: 100%;
+  margin-top: 0.25rem;
+  color: #f86c6b;
+}
+.is-invalid {
+  border-color: #f86c6b !important;
+  color: #f86c6b;
+}

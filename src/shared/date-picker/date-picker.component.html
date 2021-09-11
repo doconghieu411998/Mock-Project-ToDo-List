@@ -1,0 +1,18 @@
+<ng-container>
+  <label *ngIf="labelDatePicker" class="label-block label-common">{{labelDatePicker}} <span class="text-danger">{{required ? '*' : ''}}</span></label>
+  <ng-container>
+    <input
+      [formControl]="datePickerControl"
+      [required]="required"
+      type="date"
+      (ngModelChange)="handlerValueChange($event)"
+      [attr.max]="max ? max : null"
+      [attr.min]="min ? min : null"
+    >
+    <div class="invalid-feeback"
+         *ngIf="parentControl && parentControl.touched && parentControl.invalid && validationMessage"
+    >
+      {{validationMessage}}
+    </div>
+  </ng-container>
+</ng-container>

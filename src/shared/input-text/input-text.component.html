@@ -1,0 +1,17 @@
+<ng-container>
+  <label *ngIf="labelInputText" class="label-block label-common">{{labelInputText}} <span class="text-danger">{{required ? '*' : ''}}</span></label>
+  <ng-container>
+    <input
+      [formControl]="inputControl"
+      placeholder="{{placeholder}}"
+      (input)="handlerValueChange($event)"
+      [required]="required"
+      [class.is-invalid]="parentControl && parentControl.touched && parentControl.invalid"
+    >
+    <div class="invalid-feeback"
+         *ngIf="parentControl && parentControl.touched && parentControl.invalid && validationMessage"
+    >
+      {{validationMessage}}
+    </div>
+  </ng-container>
+</ng-container>

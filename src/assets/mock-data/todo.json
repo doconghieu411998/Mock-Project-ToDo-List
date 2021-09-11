@@ -1,0 +1,28 @@
+{
+  "todolist": [
+    {
+      "id": 0,
+      "taskName": "Do home work",
+      "dueDate": "2021-10-12",
+      "piority": "H",
+      "description": "Description",
+      "progress": true
+    },
+    {
+      "id": 1,
+      "taskName": "Do house work",
+      "dueDate": "2021-10-11",
+      "piority": "N",
+      "description": "Description",
+      "progress": false
+    },
+    {
+      "id": 2,
+      "taskName": "Do something",
+      "dueDate": "2021-10-13",
+      "piority": "L",
+      "description": "Description",
+      "progress": true
+    }
+  ]
+}

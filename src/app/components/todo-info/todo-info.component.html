@@ -1,0 +1,33 @@
+<form [formGroup]="formGroup">
+  <div class="row form-group">
+    <app-input-text
+      formControlName="taskName"
+      [required]="true"
+      [placeholder]="'Add new task...'"
+    ></app-input-text>
+  </div>
+  <div class="row form-group">
+    <app-text-area
+      formControlName="description"
+      [textAreaLabel]="'Description'"
+    ></app-text-area>
+  </div>
+  <div class="grid-container">
+    <div class="row form-group gird-item">
+      <app-date-picker
+        formControlName="dueDate"
+        [labelDatePicker]="'Due Date'"
+        [required]="true"
+        [min]="minDate"
+      ></app-date-picker>
+    </div>
+    <div class="row form-group gird-item">
+      <app-select
+        formControlName="piority"
+        [labelSelect]="'Piority'"
+        [required]="true"
+        [selectOptions]="piorityOption"
+      ></app-select>
+    </div>
+  </div>
+</form>

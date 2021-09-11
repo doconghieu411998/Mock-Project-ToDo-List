@@ -1,0 +1,112 @@
+.content {
+  overflow: auto;
+  max-height: 400px;
+  height: 400px;
+  margin-bottom: 10%;
+}
+.content-item {
+  border: 1px solid;
+  margin: 1rem;
+}
+.card-header {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  border-bottom: 0.5px solid;
+  padding: 1rem;
+}
+.event-buttons {
+  display: grid;
+  grid-template-columns: 45% 45%;
+  grid-column-gap: 35px;
+}
+.card-body {
+  margin: 1rem;
+  overflow: hidden;
+}
+.progress-checkbox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  font-size: 20px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+.progress-checkbox:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+.progress-checkbox input:checked ~ .checkmark {
+  background-color: #f4f4f4;
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.progress-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+.progress-checkbox .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+button {
+  color: #ffffff;
+  border-radius: 5px;
+  border: none;
+}
+button.detail-button {
+  background-color: #42c6db;
+}
+button.remove-button {
+  background-color: #db4342;
+}
+button.done-button {
+  background-color: #42a5db;
+}
+.card-footer {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding: 1rem;
+}
+.bulk-action {
+  background-color: #cccccc;
+}
+.button-bulk-action {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-column-gap: 10px;
+}
+.not-any-more {
+  text-align: center;
+  font-size: 30px;
+}
+.input-search {
+  margin: 1rem;
+}
