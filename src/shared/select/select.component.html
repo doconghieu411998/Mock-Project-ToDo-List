@@ -1,0 +1,19 @@
+<ng-container>
+  <label *ngIf="labelSelect" class="label-block label-common">{{labelSelect}} <span class="text-danger">{{required ? '*' : ''}}</span></label>
+  <ng-container>
+    <select
+      [formControl]="selectControl"
+      [required]="required"
+      (ngModelChange)="handlerValueChange($event)"
+      id="{{id}}">
+      <option *ngFor="let item of selectOptions" value="{{item.id}}">
+        {{item.itemName}}
+      </option>
+    </select>
+    <div class="invalid-feeback"
+         *ngIf="parentControl && parentControl.touched && parentControl.invalid && validationMessage"
+    >
+      {{validationMessage}}
+    </div>
+  </ng-container>
+</ng-container>

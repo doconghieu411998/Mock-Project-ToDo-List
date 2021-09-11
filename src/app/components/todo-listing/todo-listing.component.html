@@ -1,0 +1,40 @@
+<ng-container>
+  <div class="input-search">
+    <app-input-search *ngIf="totalRecord !== 0" (searchText)="onSearch($event)"></app-input-search>
+  </div>
+  <div *ngIf="toDoList.length; else notAnyMore" class="container">
+    <div class="content">
+      <div class="content-item" *ngFor="let item of toDoList; let i = index">
+        <div class="card-header">
+          <div class="progress">
+            <label class="progress-checkbox"><span>{{item.taskName}}</span>
+              <input (change)="handlerChecked($event, item)" type="checkbox" [checked]="item.progress">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="event-buttons">
+            <button id="detail-button{{i}}" class="detail-button" (click)="isExpanded(i, cardBody)">Detail</button>
+            <button id="remove-button{{i}}" class="remove-button" (click)="handlerRemove(item.id)">Remove</button>
+          </div>
+        </div>
+        <div style="display: none" #cardBody id="{{i}}" class="card-body">
+          <app-submit-form [isUpdate]="true">
+            <app-todo-info content #dataContent [toDo]="item"></app-todo-info>
+          </app-submit-form>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="showBulkAction()" class="card-footer bulk-action">
+      <label class="label-block label-common">Bulk Action:</label>
+      <div class="button-bulk-action">
+        <button class="done-button" (click)="handlerButtonDone()">Done</button>
+        <button class="remove-button" (click)="handlerButtonRemove()">Remove</button>
+      </div>
+    </div>
+  </div>
+</ng-container>
+<ng-container>
+  <ng-template #notAnyMore>
+    <label class="not-any-more label-block label-common">Not Any More</label>
+  </ng-template>
+</ng-container>

@@ -1,0 +1,10 @@
+.todo {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.todo-item {
+  border: 1px solid rgba(0, 0, 0, 0.8);
+}
+.label {
+  margin: 50px 0;
+}

@@ -1,0 +1,11 @@
+<ng-container>
+  <label *ngIf="textAreaLabel" class="label-block label-common">{{textAreaLabel}} <span class="text-danger">{{required ? '*' : ''}}</span></label>
+  <ng-container>
+    <textarea
+      [formControl]="textAreaControl"
+      rows="{{rows}}"
+      cols="{{cols}}"
+      (input)="handlerValueChange($event)"
+    ></textarea>
+  </ng-container>
+</ng-container>

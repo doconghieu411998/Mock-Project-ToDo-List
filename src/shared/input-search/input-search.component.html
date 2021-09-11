@@ -1,0 +1,7 @@
+<form [formGroup]="formGroup">
+  <app-input-text
+    formControlName="searchText"
+    [placeholder]="'Search...'"
+    (inputTextOutPut)="handlerDataOutPut($event)"
+  ></app-input-text>
+</form>
