@@ -106,6 +106,7 @@ button.done-button {
 .not-any-more {
   text-align: center;
   font-size: 30px;
+  margin: 1rem 0;
 }
 .input-search {
   margin: 1rem;

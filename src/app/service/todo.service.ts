@@ -29,7 +29,10 @@ export class TodoService {
   }
 
   addNewToDo(toDo: ToDoModel) {
-    const toDoList: ToDoModel[] =  this.localStorage.loadRetrieve(this.localStorageKey);
+    let toDoList: ToDoModel[] =  this.localStorage.loadRetrieve(this.localStorageKey);
+    if (!toDoList) {
+      toDoList = [];
+    }
     toDoList.unshift(toDo);
     this.stepAddMultipleRecordToLocalStorage(toDoList, 'C');
   }
