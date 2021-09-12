@@ -23,7 +23,7 @@ export class TodoService {
 
   getToDoListing() {
     const toDoList: ToDoModel[] =  this.localStorage.loadRetrieve(this.localStorageKey);
-    this.toDoList = toDoList.length ? toDoList : [];
+    this.toDoList = (toDoList && toDoList.length) ? toDoList : [];
     this.toDoListingSubject.next(this.toDoList);
     this.totalRecordSubject.next(this.toDoList.length);
   }
