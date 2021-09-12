@@ -1,4 +1,4 @@
-export interface SelectItemModel {
+export class SelectItemModel {
   id: any;
   itemName: string;
 }

@@ -1,4 +1,4 @@
-export interface ToastMessageModel {
+export class ToastMessageModel {
   title: string;
   content: string;
 }
